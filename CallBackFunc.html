@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+    <p>Message will displayed after 3sec</p>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <script>
+        function add(a, b, mycallback) {
+            let sum = a + b;
+            mycallback(sum);
+        }
+        function display(sum) {
+            document.getElementById("d1").innerHTML = "Addition is " + sum;
+        }
+        add(34, 23, display);
+
+
+        //SetTimeout
+
+     
+
+        setTimeout(function() {
+            document.getElementById("d2").innerHTML = "Hello Everyone...Good Morning";
+        }, 3000);
+
+        function showtime() {
+            let d = new Date();
+            let result = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+            document.getElementById("d3").innerHTML = result;
+        }
+        setInterval(showtime, 1000);
+    </script>
+</body>
+</html>

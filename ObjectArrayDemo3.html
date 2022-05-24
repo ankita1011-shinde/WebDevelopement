@@ -1,0 +1,95 @@
+<html>
+<head></head>
+<body>
+    <div id="d1"></div>
+    <br />
+    <div id="d2"></div>
+    <br />
+    <div id="d3"></div>
+    <script>
+        const employee =
+            [
+                {
+                    firstname: "Rohit",
+                    lastname: "Patil",
+                    City: "Pune",
+                },
+                {
+                    firstname: "Ankita",
+                    lastname: "Shinde",
+                    City: "Mumbai",
+                },
+                {
+                    firstname: "Shree",
+                    lastname: "Dev",
+                    City: "Pune",
+                }
+            ]
+
+        var data = "<table border='1'><tr><th>First Name</th><th>Last Name</th><th>City</th></tr>";
+        for (let i = 0; i < employee.length; i++) {
+            data += "<tr><td>" + employee[i].firstname + "</td><td>" + employee[i].lastname + "</td><td>" + employee[i].City + "</td></tr>";
+        }
+
+        data += "</table>";
+        document.getElementById("d1").innerHTML = data;
+
+
+        const Student =
+            [
+                {
+                    firstname: "Ajay Patil",
+                    RollNo: "01",
+                    Brcnch: "COm",
+                },
+                {
+                    firstname: "Ankita Shinde",
+                    RollNo: "02",
+                    Brcnch: "EXTC",
+                },
+                {
+                    firstname: "Shree Patil",
+                    RollNo: "03",
+                    Brcnch: "IT",
+                }
+            ]
+        var data2 = "<table border='1'><tr><th>First Name</th><th>Roll No</th><th>Branch</th></tr>";
+        for (let i = 0; i < Student.length; i++) {
+            data2 += "<tr><td>" + Student[i].firstname + "</td><td>" + Student[i].RollNo + "</td><td>" + Student[i].Brcnch + "</td></tr>";
+        }
+
+        data2 += "</table>";
+        document.getElementById("d2").innerHTML = data2;
+
+
+        const product =
+            [
+                {
+                    Product: "Dell",
+                    price: "3456",
+                    City: "Pune",
+                },
+                {
+                    Product: "Dell",
+                    price: "3456",
+                    City: "Mumbai",
+                },
+                {
+                    Product: "Dell",
+                    price: "3456",
+                    City: "Pune",
+                }
+            ]
+
+        var data3 = "<table border='1'><tr><th>Product</th><th>Price</th><th>City</th></tr>";
+        for (let i = 0; i < product.length; i++) {
+            data3 += "<tr><td>" + product[i].Product + "</td><td>" + product[i].price + "</td><td>" + product[i].City + "</td></tr>";
+        }
+
+        data3+= "</table>";
+        document.getElementById("d3").innerHTML = data3;
+
+    </script>
+
+</body>
+</html>

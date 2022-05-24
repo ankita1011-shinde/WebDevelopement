@@ -1,0 +1,47 @@
+<html>
+<head></head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <script>
+
+
+        //call(), bind(), apply()
+
+        const employee = {
+            age: 30,
+            fullname: function (city, country) {
+                return this.firstname + " " + this.lastname + " " + city + " " + country;
+            }
+        }
+        const member = {
+            firstname: "User1",
+            lastname: "User"
+        }
+
+        //bind()
+
+        const Employee = {
+            firstName: "Ankita",
+            lastNmae: "Patil",
+            age: 26,
+            FullName: function () {
+                return this.firstName + "" + this.lastNmae;
+            }
+        }
+        const Member = {
+            firstName: "User1",
+            lastNmae: "User"
+
+        }
+        let EmpInfo = Employee.FullName.bind(member);
+        document.getElementById("d3").innerHTML = EmpInfo();
+
+        document.getElementById("d1").innerHTML = employee.fullname.call(member, "pune", "india");
+        document.getElementById("d2").innerHTML = employee.fullname.apply(member, ["Mumbai", "India"]);
+
+    </script>
+</body>
+</html>
