@@ -1,0 +1,74 @@
+<html>
+<head></head>
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4"></div>
+<body>
+    <script>
+        //var emp={}
+    const employee = {
+        firstname: "Ankita",
+        lastname: "Shinde",
+        age: 27,
+        fullName:function(){
+            return this.firstname + " " + this.lastname;
+        }
+        }
+
+        
+        const product = {
+            id: 1,
+            name: "mouse",
+            price: 899,
+            discountAmount: function () {
+                return this.price*0.10;
+            },
+            DiscountPrise: function () {
+                return this.price - this.discountAmount();
+            },
+            display: function(){
+                return this.id + " " + this.name + " " + this.price;
+            }
+        }
+
+        const Student = {
+            stdName: "Rohit",
+            Rollnum: 102,
+            math: 50,
+            science: 67,
+            hindi: 54,
+            english: 78,
+            marathi: 78,
+            
+
+            
+           
+           
+        StudentDetails: function () {
+                return "Student name: " + this.stdName +"<br/>"+ " Roll num: " + this.Rollnum;
+            },
+        TotalMarks: function() {
+            var total = this.math + this.english + this.science + this.hindi + this.marathi;
+            return "Total Marks: " + total;
+        },
+            percentage: function () {
+                var per = this.TotalMarks() / 5;
+                return "Percentage: " + per;
+        }
+        }
+        document.getElementById("d2").innerHTML = " product display= " + product.display();
+        document.getElementById("d3").innerHTML = " Price aftr discount= " + product.discountAmount();
+        document.getElementById("d1").innerHTML = employee.fullName();
+
+        document.getElementById("d4").innerHTML = "-----Student details-----" + "<br/>" + Student.StudentDetails() + "<br/> " + Student.TotalMarks() + "<br/>" + Student.percentage();
+        
+        //console.log(employee.firstname + employee["lastname"]);
+        //console.log(product["name"] + product.price);
+        console.log(employee)
+        //document.getElementById("d1").innerHTML = Object.values(employee);
+        //document.getElementById("d1").innerHTML = JSON.stringify(product); //Json representation
+       // document.getElementById("d2").innerHTML = JSON.stringify(employee);
+    </script>
+</body>
+</html>

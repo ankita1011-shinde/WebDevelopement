@@ -1,0 +1,64 @@
+<html>
+<head></head>
+<body>
+    <script>
+        var text = "Hello to all Good Morning all";
+        console.log(text);
+
+        var text2="Ankita"
+
+        console.log(text.toUpperCase());
+        console.log(text.toLowerCase());
+
+        let res1 = text.slice(6);
+        let res2 = text.slice(6, 9); //9 - index value will be retrive
+        console.log(res1);
+        console.log(res2);
+        //slice = 1 start index
+        //slice 2= end index(end index value is skipped)
+
+        let a = text.charAt(12);            //CharAt
+        console.log(a);
+
+        var res3 = text.concat(" "+text2);  //Concat
+        console.log(res3);
+
+        //text=text.replace("all", "Everyone");    //replace first occurence
+        //console.log(text);
+
+        text = text.replace(/all/g, "everyone"); //replace all
+        console.log(text);
+
+        //substring 
+        var r1 = text.substring(1, 4); //4 - number of char that needs to be add
+        var r2 = text.substring(3);
+        console.log(r1);
+        console.log(r2);
+
+        var str = text.split(" ",4);  //split func 
+        console.log(str);
+        var str2 = text.split(" ");
+        console.log(str2);
+
+        //index of('a") & last indexof('a')
+       // var s1 = text.indexOf('a');
+        //console.log(s1);
+
+       // var s1 = text.lastIndexOf('a');
+       // console.log(s1);
+
+        //trim()
+        //text = text.trim();
+        //console.log(text);
+
+
+        //Tofixed() & tostring();
+
+        var n1 = 9.567;
+        var str = n1.toString();
+
+        console.log(n1.toFixed(2)); //currency
+        console.log(n1.toFixed(3));  // weight kg-gm
+    </script>
+</body>
+</html>
