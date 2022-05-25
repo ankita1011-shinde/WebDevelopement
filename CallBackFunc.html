@@ -5,6 +5,9 @@
     <div id="d1"></div>
     <div id="d2"></div>
     <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
     <script>
         function add(a, b, mycallback) {
             let sum = a + b;
@@ -14,13 +17,13 @@
             document.getElementById("d1").innerHTML = "Addition is " + sum;
         }
         add(34, 23, display);
-
+       
 
         //SetTimeout
 
-     
 
-        setTimeout(function() {
+        /*
+        setTimeout(function () {
             document.getElementById("d2").innerHTML = "Hello Everyone...Good Morning";
         }, 3000);
 
@@ -30,6 +33,54 @@
             document.getElementById("d3").innerHTML = result;
         }
         setInterval(showtime, 1000);
+
+        function display(data) {
+            document.getElementById("d4").innerHTML = data;
+        }
+        //can write code to get data from server/DB...
+        var promise = new Promise(function (resolve, reject) {
+            let x = 10;
+            if (x == 10) {
+                resolve("code get executed successfully");
+            }
+            else {
+                reject("Error in the code");
+            }
+        });
+
+        promise.then(function (value) {
+            display(value);
+        }, function (error) {
+            display(error);
+        });
+        */
+        var city = ["mumbai", "pune", "latur", "thane"];
+        function display(data) {
+            var text= "<ul>";
+            for (let i = 0; i < data/ length; i++) {
+                text+="<li>"+data[i] +"</li>";
+            }
+            text+="</ul>";
+            document.getElementById("d5").innerHTML = text;
+        }
+        function displayerror(data1) {
+            document.getElementById("d6").innerHTML = data;
+        }
+        var promise = new Promise1(function (resolve, reject) {
+            if (city != null) {
+                resolve(city);
+            }
+            else {
+                reject("Error in the city code");
+            }
+        });
+
+        promise.then(function (value) {
+            display(value);
+        }).catch(function (error) {
+            displayerror(error);
+        });
+
     </script>
 </body>
 </html>

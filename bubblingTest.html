@@ -1,0 +1,27 @@
+<html>
+<head>
+
+</head>
+<body>
+    
+        <div id="parent">
+            <button type="button">Parent</button>
+            <div id="child">
+                <button type="button">child</button>
+            </div>
+        </div>
+    
+        <script>
+            /*
+             bubbling and capturing in javascript
+             */
+           
+                document.getElementById("parent").addEventListener("click", function () {
+                    alert("in parent code");
+                }, true); //set as true...parent have to run first
+                document.getElementById("child").addEventListener("click", function () {
+                    alert("inside child");
+                }, false);
+        </script>
+</body>
+</html>

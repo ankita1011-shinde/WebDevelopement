@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+    <div id="d1"></div>
+    <script>
+        function display(data) {
+            document.getElementById("d1").innerHTML = data;
+        }
+      //  function myFunction() {
+       //     return promise.resolve(Response);
+        // }
+        async function myFunc() {
+            return "Heloo all";
+        }
+        myFunc().then(function (value) {
+            display(value);
+        })
+    </script>
+</body>
+</html>
