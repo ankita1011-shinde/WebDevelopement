@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <h2> Arrow Function</h2>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <script>
+
+            let Myfunc = (a, b) => a + b;
+
+            console.log("Addition is: " + Myfunc(43, 12));
+            document.getElementById("d1").innerHTML = Myfunc(43, 12);
+
+            let sub = (a, b) => a - b;
+            console.log("sub is: " + sub(20, 6));
+            document.getElementById("d2").innerHTML = sub(20, 6);
+
+            let multiply = (a, b) => a * b;
+
+            console.log("mult is: " + multiply(5, 2));
+            document.getElementById("d3").innerHTML = multiply(5, 2);
+
+            let div = (a, b) => a / b;
+            console.log("div is: " + div(12, 4));
+            document.getElementById("d4").innerHTML = div(12, 4);
+
+            str1 = (name) => "Hello " + name;
+            document.getElementById("d5").innerHTML = str1("ankita");
+
+        </script>
+
+    </body>
+</html>

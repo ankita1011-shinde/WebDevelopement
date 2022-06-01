@@ -25,3 +25,9 @@ h1{
 .center-aligment{
     text-align:center;
 }
+div{
+    margin:20px 37px 20px 23px;
+    border:7px solid darkblue;
+    padding:12px 20px 19px 40px;
+
+}

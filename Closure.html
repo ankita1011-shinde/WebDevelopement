@@ -1,0 +1,38 @@
+<html>
+<head></head>
+<body>
+    <input type="button" value="Count btn 1" onclick="display()" />
+    <input type="button" value="Count btn 2" onclick="display2()" />
+    <div id="d1"></div>
+    <div id="d2"></div>
+
+</body>
+<script>
+    const result= (
+    function(){
+    let counter=0;
+    return function(){  // closures
+    counter++;
+    return counter;
+    }
+    })();
+
+    const result2= (
+    ()=>{
+    let counter=0;
+    return ()=>{  // closures
+    counter++;
+    return counter;
+    }
+    })();
+
+    function display() {
+
+        document.getElementById("d1").innerHTML = result();
+    }
+    function display2() {
+        document.getElementById("d2").innerHTML = result2();
+    }
+
+</script>
+</html>
