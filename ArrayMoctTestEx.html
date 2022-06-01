@@ -1,0 +1,29 @@
+
+
+<html>
+<head>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+
+    <script>
+
+        var colors = ["red", "blue", "green", "black"];
+
+        colors.unshift("gray");
+        colors.push("black");
+        document.getElementById("d1").innerHTML = colors;
+
+        var data ="<ol>";
+        for (let i = 0; i < colors.length; i++) {
+            data += "<li>" + colors[i] + "</li>";
+        }
+        data += "</ol>";
+        console.log(data);
+        document.getElementById("d3").innerHTML = data;
+
+    </script>
+</body>
+</html>
